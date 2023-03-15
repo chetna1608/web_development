@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 10</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: sans-serif;
+        }
+
+        img {
+            height: 100px;
+            width: 100px;
+        }
+
+        .form {
+            background-color: lightgrey;
+            height: 80vh;
+            width: 30vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            box-shadow: 2px 2px 2px 2px grey;
+        }
+
+        .inpu {
+            display: flex;
+            margin: 20px 0;
+        }
+
+        .inpu label {
+            width: 50%;
+        }
+
+        .inpu input {
+            width: 50%;
+            padding: 5px;
+            border: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 5px;
+
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                if(!$("#password").val() || !$(".name").val() || !$(".mobile").val() || !$(".email").val()){
+                    alert("Please enter a valid details");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="form">
+        <h1>Regsitration Form</h1>
+        <form>
+            <div class="inpu">
+                <label for="">UserName: </label>
+                <input class="name" type="text" placeholder="Enter Name...">
+            </div>
+            <div class="inpu">
+                <label for="Email">Email: </label>
+                <input class="email" type="email" placeholder="Enter Email">
+            </div>
+            <div class="inpu">
+                <label for="mobile">Mobile: </label>
+                <input class="mobile" type="number" placeholder="Enter Mobile number...">
+            </div>
+            <div class="inpu">
+                <label for="Gender">Gender: </label>
+                <input type="radio" name="gender"></radio>
+                <label for="Female">Female</label>
+                <input type="radio" name="gender"></radio>
+                <label for="Male">Male</label>
+            </div>
+            <div class="inpu">
+                <label for="city">City: </label>
+                <select name="" id="">
+                    <option value="select">Select</option>
+                    <option value="Bhubaneswar">Bhubaneswar</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Delhi">Delhi</option>
+                </select>
+            </div>
+            <div class="inpu">
+                <label for="password">Password: </label>
+                <input id="password" type="password" placeholder="Enter password..">
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>

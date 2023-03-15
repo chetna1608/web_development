@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            position: relative;
+        }
+        .sub{
+            color: rgb(219, 161, 139);
+        }
+        
+        .new{
+            background-color: rgb(151, 107, 155);
+            height: 100px;
+            width: 100px;
+        }
+
+        .contain{
+            background-color: rgb(197, 131, 206);
+            height: 100px;
+            width: 100px;
+        }
+
+        button{
+            padding: 10px 20px;
+            margin: 30px 10px;
+            border: none;
+            background-color: rgb(172, 170, 167);
+            color: rgb(14, 13, 13);
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: rgb(211, 207, 200);
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".slideUp").click(function() {
+                $(".contain").slideUp();
+            });
+            $(".slideDown").click(function() {
+                $(".contain").slideDown();
+            });
+            $(".hide").click(function() {
+                $(".contain").hide();
+            });
+            $(".show").click(function() {
+                $(".contain").show();
+            });
+            $(".contain").mouseenter(function() {
+                $(".contain").css("background-color","orange");
+            });
+            $(".contain").mouseleave(function() {
+                $(".contain").css("background-color","teal");
+            });
+            $(".attrs").click(function() {
+                console.log($(".contain").attr("class","new"));;
+            });
+            $(".dbl").dblclick(function() {
+                $(".contain").css("border","10px dashed orange");
+            });
+            $(".fadeIn").click(function() {
+                $(".contain").fadeIn(2000);
+            });
+            $(".fadeOut").click(function() {
+                $(".contain").fadeOut(2000);
+            });
+            $(".animates").click(function() {
+                $(".contain").animate({
+                    width: "200px",
+                    height: "400px",
+                    opacity: "0.5"
+                });
+            });
+            $(".html").click(function(){
+                $(".contain").after($(".contain").html());
+            });
+            
+        });
+    </script>
+    <title>Question 5</title>
+</head>
+<body>
+    <div class="contain">
+        <p>I am container</p>
+    </div>
+    <button class="slideUp">Slide Up</button>
+    <button class="slideDown">Slide Down</button>
+    <button class="hide">Hide</button>
+    <button class="show">Show</button>
+    <button class="animates">Animation</button>
+    <button class="fadein">Fade In</button>
+    <button class="fadeOut">Fade Out</button>
+    <button class="dbl">Double click</button>
+    <button class="attrs">Attribute</button>
+    <button class="html">HTML</button>
+</body>
+</html>

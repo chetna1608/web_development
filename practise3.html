@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+   </script>
+    <script>
+    $(document).ready(function() {
+    $("button").click(function() {
+        $("tr:nth-child(odd)").css("background-color", "red");
+    });
+    });
+    </script>
+ </head>
+<body>
+    <style>
+			
+        table, th, td{
+            border: 2px solid Black;
+            width: 50%;
+            padding:15px;
+        }
+        
+        td{
+            color:black;
+            text-align:center;
+            font-size:20px;
+        }
+        tr:nth-child(odd) {background-color: green;}
+        
+        
+    </style>
+
+ <table class="table">
+         
+      <tbody>
+             <tr>
+                <td><i>Computer Science Workshop</i></td>
+                 <td><i>CSE-2141</i></td>
+                
+            </tr>
+            <tr>
+                <td><i>Algorithm Design</i></td>
+                 <td><i>CSE-3131</i></td>
+                
+            </tr>
+            <tr>
+                <td><i>Digital Design </i></td>
+                 <td><i>EET-1211</i></td>
+                
+            </tr>
+            <tr>
+                <td><i>Probability And Statistics</i></td>
+                 <td><i>MTH-2002</i></td>
+                
+            </tr>
+            <tr>
+                <td><i>Principles Of Macro-Economics</i></td>
+                 <td><i>HSS-2021</i></td>
+                
+            </tr>
+            
+
+             
+      </tbody>
+      </table>
+      <button>Change Background Colour from GREEN to RED</button>
+</body>
+</html>

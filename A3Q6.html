@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html >
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".add-row").click(function(){
+            var slno = $("#numb").val();
+            var name = $("#name").val();
+            var course = $("#course").val();
+            var markup = "<tr><td>"+ slno + "</td><td>"+ name + "</td><td>" + course + "</td></tr>";
+            $(" tbody").append(markup);
+        });
+        
+        $(".color").click(function() {
+                $("tr").css("color","grey");
+            });
+
+            $(".btn2").click(function() {
+                var del = $("#" + $("#Ids").val());
+                del.remove();
+                
+            });
+       
+    });    
+</script>
+
+<style>
+    form{
+        margin: 20px;
+    }
+    form input, button{
+        padding: 5px;
+    }
+    table{
+        width: 90%;
+        margin: 20px;	
+    }
+    table, th, tr, td{
+        border: 2px solid rgb(216, 29, 233);
+    }
+    th{
+        background-color :rgb(224, 162, 240);
+    }
+    tr:nth-child(even) {
+            background-color:rgb(229, 158, 231);
+            color: black;
+        }
+        tr:nth-child(odd) {
+            background-color:rgb(145, 193, 233);
+            color: black;
+        }
+    table th, table td{
+        padding: 10px;
+        text-align: left;      	
+    }
+  	.color{
+          margin-left: 20px;
+      }
+      .remove{
+          padding: 20px;
+      }
+</style>
+
+</head>
+<body style="border:1px solid rgb(165, 161, 161)">
+  	<h2>Add Rows In The Table </h2>
+    <form>
+        <input type="text" id="numb" placeholder="slno">
+        <input type="text" id="name" placeholder="Name">
+        <input type="text" id="course" placeholder="course">
+    	<input type="button" class="add-row" value="Add Row">
+      
+   </form>
+      <button class="color">Change Text Color</button>
+    <table>
+        <thead>
+            <tr>
+                <th>SLNO.</th>
+                <th>NAME</th>
+                <th>COURSE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="01">
+                <td>01</td>
+                <td>Hema</td>
+                <td>CSE</td>
+            </tr>
+            <tr id="02">
+                <td>02</td>
+                <td>Rekha</td>
+                <td>CSIT</td>
+            </tr>
+            <tr id="03">
+                <td>03</td>
+                <td>Jaya</td>
+                <td>EEE</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="remove">
+        <input id="Ids" type="text" placeholder="Enter the Sl.nos to remove">
+        <button class="btn2">Remove</button>
+    </div>
+
+   
+</body> 
+</html>
+

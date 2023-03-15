@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+ul {
+list-style-type: none;
+margin: 15px;
+padding: 10px;
+
+
+}
+li {
+float: left;
+}
+li a {
+	background-color: lightblue;
+display: block;
+color: deepskyblue;
+padding: 12px 15px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #c1e1c1;
+  min-width: 70px;
+  min-height: 90px;
+  
+  padding: 12px 16px;
+  
+}
+ul.dropdown-content {
+list-style-type: none;
+margin: 15px;
+padding: 10px;
+overflow: hidden;
+
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+</style>
+</head>
+<body>
+<ul>
+	<div class="dropdown">
+		
+<li><a href="#Home"><span>Home</span></a></li>
+<ul>
+<div class="dropdown-content">
+<li>Services</li>
+<li>Vision</li>
+<li>Careers</li>
+</div>
+</ul>
+</div>
+<div class="dropdown">
+	
+<li><a href="#AboutUs"><span>AboutUs</span></a></li>
+<ul>
+<div class="dropdown-content">
+<li>Scolarships</li>
+<li>FeeStructure</li>
+<li>Features</li>
+</div>
+</ul>
+</div>
+<div class="dropdown">
+	
+<li><a href="ProgramsOffered"><span>ProgramsOffered</span></a></li>
+<ul>
+<div class="dropdown-content">
+<li>Java</li>
+<li>CSS</li>
+<li>Python</li>
+</div>
+</ul>
+</div>
+<div class="dropdown">
+	
+<li><a href="Curriculum"><span>Curriculum</span></a></li>
+<ul>
+<div class="dropdown-content">
+<li>Syllabus</li>
+<li>Courses</li>
+<li>Timing</li>
+</div>
+</ul>
+</div>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  width: 300px;
+  border: 15px solid grey;
+  padding: 50px;
+  margin: 2px 40px 40% ;
+  background-color:white;
+  position:static;
+ 
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+$(document).ready(function() {
+$("div").hide();
+$( "#field1" ).blur(function() {
+  $("div").show();
+});
+});
+</script>
+</head>
+<body> <form> 
+  <input id="field1" type="text" value="Field 1">
+  <input id="field2" type="text" value="Field 2">
+  </form>
+  
+  <p>Write something in the input Field 1, and then click outside the field to check lose focus.</p>
+
+<div>
+this text box has lost it's focus
+</div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        img {
+            height: 100px;
+            width: 100px;
+        }
+
+        .form {
+            background-color: gray;
+            height: 80vh;
+            width: 25vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .inpu {
+            display: flex;
+            margin: 20px 0;
+        }
+
+        .inpu label {
+            width: 50%;
+            
+        }
+
+        .inpu input {
+            width: 50%;
+            padding: 5px;
+            
+            border: 3px solid blue;
+        }
+
+        button {
+            width: 100%;
+            padding: 5px;
+            background-color: rgb(199, 137, 101);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <img src="soa.png">
+        <form>
+            <div class="inpu">
+                <label for="">UserName: </label>
+                <input type="text" placeholder="Enter Name...">
+            </div>
+            <div class="inpu">
+                <label for="Email">Email: </label>
+                <input type="email" placeholder="Enter Email">
+            </div>
+            <div class="inpu">
+                <label for="mobile">Mobile: </label>
+                <input type="number" placeholder="Enter Mobile number...">
+            </div>
+            <div class="inpu">
+                <label for="Gender">Gender: </label>
+                <input type="radio" name="gender"></radio>
+                <label for="Female">Female</label>
+                <input type="radio" name="gender"></radio>
+                <label for="Male">Male</label>
+            </div>
+            <div class="inpu">
+                <label for="city">City: </label>
+                <select name="" id="">
+                    <option value="select">Select</option>
+                    <option value="Bhubaneswar">Bhubaneswar</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Delhi">Delhi</option>
+
+                </select>
+            </div>
+            <div class="inpu">
+                <label for="password">Password: </label>
+                <input id="password" type="password" placeholder="Enter password..">
+            </div>
+            <button type="submit" onclick=submits() id="btn"><b>Sign Up</b></button>
+        </form>
+    </div>
+</body>
+
+
+</html>
